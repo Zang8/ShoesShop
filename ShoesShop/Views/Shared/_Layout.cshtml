@@ -3,51 +3,116 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ShoesShop</title>
+    <title>@ViewData["Title"] - test</title>
+    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" />
+
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ShoesShop</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-                <partial name="_LoginPartial" />
+    <div class="main-banner" id="home">
+        <!-- header -->
+        {
+            <header class="header">
+                <div class="container-fluid px-lg-5">
+                    <!-- nav -->
+                    <nav class="py-4">
+                        <div id="logo">
+                            <h1> <a asp-area="" asp-controller="Home" asp-action="Index"><span class="fa fa-bold" aria-hidden="true"></span>ootie</a></h1>
+                        </div>
+
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu mt-2">
+                            <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog</a></li>
+                            <li>
+                                <!-- First Tier Drop Down -->
+                                <label for="drop-2" class="toggle">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                <a href="#">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-2" />
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="shop">Shop Now</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="shopsingle">Single Page</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- //nav -->
+                </div>
+            </header>
+        }
+        else
+        {
+            <header class="header">
+                <div class="container-fluid px-lg-5">
+                    <!-- nav -->
+                    <nav class="py-4">
+                        <div id="logo">
+                            <h1> <a asp-area="" asp-controller="Home" asp-action="Index"><span class="fa fa-bold" aria-hidden="true"></span>ootie</a></h1>
+                        </div>
+
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu mt-2">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li class="active"><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog</a></li>
+                            <li>
+                                <!-- First Tier Drop Down -->
+                                <label for="drop-2" class="toggle">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                <a href="#">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-2" />
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Blog">Blog</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="shop">Shop Now</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="shopsingle">Single Page</a></li>
+                                </ul>
+                            </li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- //nav -->
+                </div>
+            </header>
+            <!-- //header -->
+        }
+
+        <!--/banner-->
+        <div class="banner-info">
+            <p>Trending of the week</p>
+            <h3 class="mb-4">Casual Shoes for Men</h3>
+            <div class="ban-buttons">
+                <a href="shopsingle.cshtml" class="btn">Shop Now</a>
+                <a href="single.cshtml" class="btn active">Read More</a>
             </div>
         </div>
-    </nav>
+        <!--// banner-inner -->
+
+    </div>
 
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - ShoesShop</p>
-        </footer>
-    </div>
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

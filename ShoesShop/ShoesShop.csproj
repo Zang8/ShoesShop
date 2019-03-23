@@ -2,8 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <UserSecretsId>aspnet-ShoesShop-CFB202A0-8935-4640-95D2-91842258E6E3</UserSecretsId>
+    <UserSecretsId>aspnet-test-A0BD848C-D737-4797-A5C4-CB82A2F3B510</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\shopsingle.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Home\blog.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\shopsingle.cshtml" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />

@@ -1,6 +1,6 @@
 using System;
 
-namespace ShoesShop.Models
+namespace test.Models
 {
     public class ErrorViewModel
     {

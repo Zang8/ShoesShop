@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ShoesShop.Models;
+using test.Models;
 
-namespace ShoesShop.Controllers
+namespace test.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,6 +18,27 @@ namespace ShoesShop.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+        public IActionResult Blog()
+        {
+            ViewData["Message"] = "Your blog page.";
+
+            return View();
+        }
+
+        public IActionResult Shop()
+        {
+            ViewData["Message"] = "Your shop now page.";
+
+            return View();
+        }
+
+        public IActionResult Shopsingle()
+        {
+            ViewData["Message"] = "Your single page.";
 
             return View();
         }
